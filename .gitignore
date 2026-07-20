@@ -1,0 +1,33 @@
+# Credenciais - NUNCA versionar
+.env
+
+# Dados brutos e processados - reproduziveis pelos notebooks/scripts,
+# nao fazem sentido dentro do controle de versao (arquivos grandes)
+data/raw/*
+data/processed/*
+data/external/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+*.zip
+*.csv
+
+# Figuras geradas pelos notebooks (reproduziveis, nao versionar binarios)
+reports/figures/*.png
+!reports/figures/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Sistema operacional / editores
+.DS_Store
+.idea/
+.vscode/
